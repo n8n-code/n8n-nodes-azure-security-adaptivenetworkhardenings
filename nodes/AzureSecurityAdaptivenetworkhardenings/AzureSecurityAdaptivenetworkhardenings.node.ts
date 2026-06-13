@@ -2,32 +2,32 @@ import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from '
 
 
 export class AzureSecurityAdaptivenetworkhardenings implements INodeType {
-	description: INodeTypeDescription = {
-		displayName: 'Azure Security Adaptivenetworkhardenings',
-		name: 'N8nDevAzureSecurityAdaptivenetworkhardenings',
-		icon: { light: 'file:./azure-security-adaptivenetworkhardenings.png', dark: 'file:./azure-security-adaptivenetworkhardenings.dark.png' },
-		group: ['input'],
-		version: 1,
-		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: 'Azure Security Center API specification for Microsoft.Security resource provider.',
-		defaults: { name: 'Azure Security Adaptivenetworkhardenings' },
-		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
-		credentials: [
-			{
-				name: 'N8nDevAzureSecurityAdaptivenetworkhardeningsApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: '={{\$credentials.url}}',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+        description: INodeTypeDescription = {
+                displayName: 'Azure Security Adaptivenetworkhardenings',
+                name: 'N8nDevAzureSecurityAdaptivenetworkhardenings',
+                icon: { light: 'file:./azure-security-adaptivenetworkhardenings.png', dark: 'file:./azure-security-adaptivenetworkhardenings.dark.png' },
+                group: ['input'],
+                version: 1,
+                subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
+                description: 'Azure Security Center API specification for Microsoft.Security resource provider.',
+                defaults: { name: 'Azure Security Adaptivenetworkhardenings' },
+                usableAsTool: true,
+                inputs: [NodeConnectionTypes.Main],
+                outputs: [NodeConnectionTypes.Main],
+                credentials: [
+                        {
+                                name: 'N8nDevAzureSecurityAdaptivenetworkhardeningsApi',
+                                required: true,
+                        },
+                ],
+                requestDefaults: {
+                        baseURL: '={{\$credentials.url}}',
+                        headers: {
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                        },
+                },
+                properties: [
 		{
 			"displayName": "Resource",
 			"name": "resource",
@@ -37,6 +37,6 @@ export class AzureSecurityAdaptivenetworkhardenings implements INodeType {
 			"default": ""
 		},
 		
-		],
-	};
+                ],
+        };
 }
